@@ -23,3 +23,63 @@ def index(request):
     dict = {}
 
     return render(request, 'Coffee_App/index.html', context=dict)
+
+
+def blog(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/blog.html', context=dict)
+
+
+def about(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/about.html', context=dict)
+
+
+def blog_single(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/blog_single.html', context=dict)
+
+
+def cart(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/cart.html', context=dict)
+
+
+def checkout(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/checkout.html', context=dict)
+
+
+def contact(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/contact.html', context=dict)
+
+
+def menu(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/menu.html', context=dict)
+
+
+def product_single(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/product_single.html', context=dict)
+
+
+def service(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/services.html', context=dict)
+
+
+def shop(request):
+    dict = {}
+
+    return render(request, 'Coffee_App/shop.html', context=dict)
