@@ -1,3 +1,4 @@
+import re
 from django.core import paginator
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, redirect
 from django.views.generic import CreateView, UpdateView, ListView, DetailView, View, TemplateView, DeleteView
@@ -16,10 +17,33 @@ from django.views.generic.edit import DeleteView
 from django.views import View
 from django.views import View
 
+from Coffee_App.models import Appointment
+
 
 # Create your views here.
 
 def index(request):
+    if request.method=='POST':
+        first_name=request.POST.get('first_name')
+        print("test one",first_name)
+        last_name=request.POST.get('last_name')
+        date=request.POST.get('date')
+        time=request.POST.get('time')
+        message=request.POST.get('message')
+
+        booking_ins=Appointment(
+            first_name=first_name,
+            last_name=last_name,
+            date=date,
+            time=time,
+            message=message
+
+        )
+
+        booking_ins.save()
+        print("test",booking_ins)
+        return redirect('/')
+
     dict = {}
 
     return render(request, 'Coffee_App/index.html', context=dict)
